@@ -1,5 +1,6 @@
 package com.example.navwithtab;
 
+import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -78,6 +79,20 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
 
     }
+
+    @Override
+    protected void onPause()
+    {
+        super.onPause();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+    }
+
+    
+
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
